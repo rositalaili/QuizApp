@@ -2,8 +2,9 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 import sqlite3
 import re
 import json
+import os
 
-api_key = "AIzaSyBtvoNHT1NoIGI1kp2nN_HGMIRu9LBKFVo"
+api_key = os.getenv("GOOGLE_API_KEY")
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", api_key=api_key)
 
 def create_quiz(task_type):
@@ -59,5 +60,6 @@ def update_score(username, is_correct):
     conn.close()
 
     return new_score
+
 
 
