@@ -1,0 +1,56 @@
+/* Card dengan opacity 70% */
+.card {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* 70% opacity */
+    backdrop-filter: blur(4px); /* opsional, biar makin elegan */
+}
+
+table img {
+    width: 60px;
+}
+
+.spotlight-text {
+    position: relative;
+    display: inline-block;
+    padding: 8px 14px;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    background: radial-gradient(circle at 30% 50%, rgba(255,255,150,0.6), rgba(255,255,150,0) 70%);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 230, 100, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(255, 230, 100, 0.9);
+    }
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    font-family: 'Poppins', sans-serif;
+}
+
+.content {
+    flex: 1; 
+}
+
+/* Footer selalu di bawah */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    flex-shrink: 0;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
